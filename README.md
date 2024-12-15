@@ -1,7 +1,7 @@
 # AU-CS Suite
 
 ## About
-The AU-CS Suite is a repository of diverse microservices and applications developed iteratively by a team of computer science students from Auburn University, guided by a Georgia Tech senior CS developer. This project emphasizes designing architectures that structure applications as a set of independently deployable, loosely coupled components, also known as services. These microservices foster scalability, modularity, and ease of maintenance.
+This is a repository of diverse microservices and applications developed iteratively by a team of computer science students from Auburn University, guided by a Georgia Tech senior CS developer. This project emphasizes designing architectures that structure applications as a set of independently deployable, loosely coupled components, also known as services. These microservices foster scalability, modularity, and ease of maintenance.
 
 ## Features
 - **Microservice Architecture**: Applications are structured as independent, deployable components to ensure flexibility and scalability.
@@ -16,17 +16,21 @@ The AU-CS Suite is a repository of diverse microservices and applications develo
 
 ## Repository Structure
 ```plaintext
-/microservice-1
-    /src
-    /tests
-/microservice-2
-    /src
-    /tests
-...
+/src
+   /main
+      /java
+      /kotlin
+      /python
+      /...
+   /tests
+      /java
+      /kotlin
+      /python
+      /...
 README.md
 ```
 
-Each microservice has its own directory with source code (`/src`) and tests (`/tests`). Additional documentation for each service can be found within its respective folder.
+The repository uses a Gradle-style directory structure. Each language-specific folder under `src` can have its own execution points, such as `cli` for command-line interfaces and `gui` for graphical user interfaces. Testing directories for each language are located under `tests`.
 
 ## Getting Started
 1. **Clone the Repository**
@@ -34,9 +38,9 @@ Each microservice has its own directory with source code (`/src`) and tests (`/t
    git clone https://github.com/your-username/au-cs-suite.git
    cd au-cs-suite
    ```
-2. **Navigate to a Microservice Directory**
+2. **Navigate to a Language or Execution Point**
    ```bash
-   cd microservice-1
+   cd src/language-1/cli
    ```
 3. **Run the Service**
    Refer to the specific microservice documentation for setup and execution instructions.
@@ -54,12 +58,13 @@ Each microservice has its own directory with source code (`/src`) and tests (`/t
 4. **Push to Your Fork and Create a Pull Request**
 
 ## Team
-- **Lead Developer**: [Your Name] (Georgia Tech senior CS developer)
-- **Teammates**: [List names of Auburn University students]
+- **Lead Developer**: Jaehoon Song (Georgia Tech senior CS developer)
+- **Auburn University CS students suite**:
+  - AAAAA
+  - BBBBB
 
 ## License
 This is free and unencumbered software released into the public domain.
 
 ## Contact
 For questions or suggestions, feel free to reach out to [Your Email/Contact Info].
-
