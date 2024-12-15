@@ -1,7 +1,7 @@
-# AU-CS Collaborative Suite
+# AU-CS Suite
 
 ## About
-The AU-CS Collaborative Suite is a repository of diverse microservices and applications developed iteratively by a team of computer science students from Auburn University, guided by a Georgia Tech senior CS developer. This project emphasizes designing architectures that structure applications as a set of independently deployable, loosely coupled components, also known as services. These microservices foster scalability, modularity, and ease of maintenance.
+The AU-CS Suite is a repository of diverse microservices and applications developed iteratively by a team of computer science students from Auburn University, guided by a Georgia Tech senior CS developer. This project emphasizes designing architectures that structure applications as a set of independently deployable, loosely coupled components, also known as services. These microservices foster scalability, modularity, and ease of maintenance.
 
 ## Features
 - **Microservice Architecture**: Applications are structured as independent, deployable components to ensure flexibility and scalability.
@@ -31,8 +31,8 @@ Each microservice has its own directory with source code (`/src`) and tests (`/t
 ## Getting Started
 1. **Clone the Repository**
    ```bash
-   git clone https://github.com/your-username/au-cs-collaborative-suite.git
-   cd au-cs-collaborative-suite
+   git clone https://github.com/your-username/au-cs-suite.git
+   cd au-cs-suite
    ```
 2. **Navigate to a Microservice Directory**
    ```bash
@@ -58,7 +58,7 @@ Each microservice has its own directory with source code (`/src`) and tests (`/t
 - **Teammates**: [List names of Auburn University students]
 
 ## License
-This repository is licensed under the MIT License. See [LICENSE](LICENSE) for details.
+This is free and unencumbered software released into the public domain.
 
 ## Contact
 For questions or suggestions, feel free to reach out to [Your Email/Contact Info].
