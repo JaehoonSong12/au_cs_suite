@@ -67,4 +67,4 @@ The repository uses a Gradle-style directory structure. Each language-specific f
 This is free and unencumbered software released into the public domain.
 
 ## Contact
-For questions or suggestions, feel free to reach out to [Your Email/Contact Info].
+For questions or suggestions, feel free to reach out to manual20151276@gmail.com.
