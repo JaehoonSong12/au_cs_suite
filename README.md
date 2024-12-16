@@ -58,7 +58,7 @@ The repository uses a Gradle-style directory structure. Each language-specific f
 4. **Push to Your Fork and Create a Pull Request**
 
 ## Team
-- **Lead Developer**: Jaehoon Song (Georgia Tech senior CS developer)
+- **Lead Developer**: Jaehoon Song (Georgia Tech senior developer)
 - **Auburn University CS students suite**:
   - AAAAA
   - BBBBB
