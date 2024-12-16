@@ -67,13 +67,13 @@ This is a repository of diverse microservices and applications developed iterati
 
 For detailed documentation, including textbook references, project specifications, development guidelines, and usage instructions, please visit our documentation on Google Drive:
 
-[YDJS Academy Documentation](https://drive.google.com/drive/folders/1quzaFGCofImVVMIplGbBr-Biqa3eWYgq?usp=drive_link)
+[YDJS Academy Documentation](https://drive.google.com/drive/folders/1saxYZpeG_U3vsAhd0bCbIjVzMoZWK4RF?usp=sharing)
 
 ## Code Access
 
 The code for this project is hosted on GitHub in this repository. You can explore the source code, contribute, and access different branches as necessary:
 
-[GitHub Repository - YDJS Academy Project](https://github.com/JaehoonSong12/ydjs_academic)
+[GitHub Repository - AU-CS Suite](https://github.com/JaehoonSong12/au_cs_suite)
 
 
 
