@@ -58,10 +58,12 @@ The repository uses a Gradle-style directory structure. Each language-specific f
 4. **Push to Your Fork and Create a Pull Request**
 
 ## Team
-- **Lead Developer**: Jaehoon Song (Georgia Tech senior developer)
-- **Auburn University CS students suite**:
-  - AAAAA
-  - BBBBB
+- **Software Architect (Tech Lead)**: Jaehoon Song
+  - Takes a broader role, overseeing the technical direction of the project, guide developers on how to implement features within the system architecture, and solving algorithmic and archiectural issues.
+- **AAAAA**:
+  - desc
+- **BBBBB**:
+  - desc
 
 ## License
 This is free and unencumbered software released into the public domain.
