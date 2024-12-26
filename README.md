@@ -38,6 +38,27 @@
 ## About
 This is a repository of diverse microservices and applications developed iteratively by a team of computer science students from Auburn University, guided by a Georgia Tech senior developer (Jaehoon Song). This project emphasizes designing architectures that structure applications as a set of independently deployable, loosely coupled components, also known as services. These microservices foster scalability, modularity, and ease of maintenance.
 
+
+## Documentation
+
+For detailed documentation, including textbook references, project specifications, development guidelines, and usage instructions, please visit our documentation on Google Drive:
+
+[AUC Documentation](https://drive.google.com/drive/folders/1saxYZpeG_U3vsAhd0bCbIjVzMoZWK4RF?usp=sharing)
+
+
+## Project Management Platform
+Collaborate and stay updated on project discussions, tasks, and announcements through our Discord channel:
+
+[AUC Discord](https://discord.com/channels/1321901302548136030/1321901303114240126)
+
+
+## Code Access
+
+The code for this project is hosted on GitHub in this repository. You can explore the source code, contribute, and access different branches as necessary:
+
+[GitHub Repository - AUC](https://github.com/JaehoonSong12/au_cs_suite)
+
+
 ## Team
 - **Software Architect (Tech Lead)**: Jaehoon Song
   - Takes a broader role, overseeing the technical direction of the project, guide developers on how to implement features within the system architecture, and solving algorithmic and archiectural issues.
@@ -56,27 +77,6 @@ This is a repository of diverse microservices and applications developed iterati
 1. **Iterative Cycles**: Development occurs in sprints, with each cycle refining functionality and addressing feedback.
 2. **Service Modularity**: Each microservice is self-contained, facilitating independent deployment and updates.
 3. **Collaboration and Learning**: Encouraging mentorship, code reviews, and shared learning among the team.
-
-
-## Documentation
-
-For detailed documentation, including textbook references, project specifications, development guidelines, and usage instructions, please visit our documentation on Google Drive:
-
-[AUC Documentation](https://drive.google.com/drive/folders/1saxYZpeG_U3vsAhd0bCbIjVzMoZWK4RF?usp=sharing)
-
-
-
-## Project Management Platform
-Collaborate and stay updated on project discussions, tasks, and announcements through our Discord channel:
-
-[AUC Discord](https://discord.com/channels/1321901302548136030/1321901303114240126)
-
-
-## Code Access
-
-The code for this project is hosted on GitHub in this repository. You can explore the source code, contribute, and access different branches as necessary:
-
-[GitHub Repository - AUC](https://github.com/JaehoonSong12/au_cs_suite)
 
 
 
