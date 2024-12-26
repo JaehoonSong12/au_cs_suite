@@ -64,11 +64,24 @@ For detailed documentation, including textbook references, project specification
 
 [AUC Documentation](https://drive.google.com/drive/folders/1saxYZpeG_U3vsAhd0bCbIjVzMoZWK4RF?usp=sharing)
 
+
+
+## Project Management Platform
+Collaborate and stay updated on project discussions, tasks, and announcements through our Discord channel:
+
+[AUC Discord](https://discord.com/channels/1321901302548136030/1321901303114240126)
+
+
 ## Code Access
 
 The code for this project is hosted on GitHub in this repository. You can explore the source code, contribute, and access different branches as necessary:
 
 [GitHub Repository - AUC](https://github.com/JaehoonSong12/au_cs_suite)
+
+
+
+
+
 
 
 
@@ -79,6 +92,7 @@ The code for this project is hosted on GitHub in this repository. You can explor
   - [Features](#features)
   - [Development Approach](#development-approach)
   - [Documentation](#documentation)
+  - [Project Management Platform](#project-management-platform)
   - [Code Access](#code-access)
   - [Table of Contents](#table-of-contents)
 - [Instructions](#instructions)
