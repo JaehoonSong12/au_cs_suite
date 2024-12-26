@@ -42,7 +42,7 @@ This is a repository of diverse microservices and applications developed iterati
 ## Project Management Platform
 Collaborate and stay updated on project discussions, tasks, and announcements through our Discord channel:
 
-[AUC Discord](https://discord.com/channels/1321901302548136030/1321901303114240126)
+[Discord Server - AUC](https://discord.com/channels/1321901302548136030/1321901303114240126)
 
 
 ## Code Access
@@ -56,7 +56,7 @@ The code for this project is hosted on GitHub in this repository. You can explor
 
 For detailed documentation, including textbook references, project specifications, development guidelines, and usage instructions, please visit our documentation on Google Drive:
 
-[AUC Documentation](https://drive.google.com/drive/folders/1saxYZpeG_U3vsAhd0bCbIjVzMoZWK4RF?usp=sharing)
+[Google Documentation - AUC](https://drive.google.com/drive/folders/1saxYZpeG_U3vsAhd0bCbIjVzMoZWK4RF?usp=sharing)
 
 
 ## Team
