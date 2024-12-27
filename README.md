@@ -88,12 +88,12 @@ For detailed documentation, including textbook references, project specification
 ## Table of Contents
 - [AU-CS Suite (AUC)](#au-cs-suite-auc)
   - [About](#about)
+  - [Project Management Platform](#project-management-platform)
+  - [Code Access](#code-access)
+  - [Documentation](#documentation)
   - [Team](#team)
   - [Features](#features)
   - [Development Approach](#development-approach)
-  - [Documentation](#documentation)
-  - [Project Management Platform](#project-management-platform)
-  - [Code Access](#code-access)
   - [Table of Contents](#table-of-contents)
 - [Instructions](#instructions)
   - [Repository Structure](#repository-structure)
@@ -101,6 +101,7 @@ For detailed documentation, including textbook references, project specification
   - [Contributing](#contributing)
   - [License](#license)
   - [Contact](#contact)
+- [Seungheon Kim](#seungheon-kim)
 
 
 
@@ -176,3 +177,5 @@ For questions or suggestions, feel free to reach out to manual20151276@gmail.com
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+# Seungheon Kim
