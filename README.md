@@ -107,7 +107,23 @@ For detailed documentation, including textbook references, project specification
   - [Contributing](#contributing)
   - [License](#license)
   - [Contact](#contact)
-- [Test Commit](#test-commit)
+- [Service #1: Global Photo Booth (GPB)](#service-1-global-photo-booth-gpb)
+  - [System Architecture](#system-architecture)
+  - [Programming Language, Libraries, and Framework](#programming-language-libraries-and-framework)
+    - [Backend: API Management](#backend-api-management)
+    - [Backend: File and Image Processing](#backend-file-and-image-processing)
+    - [Backend: QR Code Management](#backend-qr-code-management)
+    - [Frontend: Web Server](#frontend-web-server)
+  - [Networking and Security](#networking-and-security)
+    - [File Management](#file-management)
+    - [QR Code Workflow](#qr-code-workflow)
+    - [Cloud Storage](#cloud-storage)
+    - [Hosting Setup](#hosting-setup)
+    - [Security Features](#security-features)
+  - [Additional Details](#additional-details)
+    - [Scalability](#scalability)
+    - [Maintenance](#maintenance)
+    - [User Experience](#user-experience)
 
 
 
@@ -183,4 +199,123 @@ For questions or suggestions, feel free to reach out to manual20151276@gmail.com
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-# Test Commit
+
+
+
+
+
+
+<br /><br /><br />
+
+---
+
+
+
+# Service #1: Global Photo Booth (GPB)
+
+The **Global Photo Booth** (GPB), also known as *Snap & Share*, offers a fun and accessible photo booth experience for users worldwide. It combines mobile technology, customizable photo features, and local collaborations, enabling users to capture and share moments easily. Core features include QR codes for direct access, in-store booths, and a mobile-friendly web app. By partnering with local events and personalities, the service also provides unique photo frames and themes to engage different communities.
+
+
+
+## System Architecture
+
+The GPB system is built on a **client-server architecture** that separates the roles of the frontend and backend for better organization and future scalability. Here’s a breakdown of the system's key components:
+
+- **Frontend:** A responsive web client that works on multiple devices without requiring any software installation.  
+- **Backend:** A Python-powered server responsible for handling file storage, photo editing, and metadata management.  
+- **Cloud Storage:** Photos and session data are stored on scalable platforms like Amazon S3 or Google Cloud.  
+- **QR Code Integration:** Unique QR codes link users directly to their photo sessions.
+
+This architecture ensures that users have a consistent and efficient experience while making it easy to maintain and expand the system.
+
+---
+
+## Programming Language, Libraries, and Framework
+
+To ensure the Global Photo Booth (GPB) system is both reliable and efficient, we have carefully selected a variety of tools and libraries to handle the different components of the backend and frontend. Each choice was made with the goal of maintaining flexibility, scalability, and ease of use for both developers and end-users.
+
+The core technologies for development are chosen as follows.
+
+- **Python** is used for the *backend* because it is well-suited for handling files, processing images, and managing data.
+- **JavaScript**, along with **HTML** and **CSS**, is used for creating the web-based *frontend* interface.
+
+### Backend: API Management
+For the backend, effective communication between the frontend and the server is critical. To achieve this, we use the following tools:
+
+- **FastAPI**: A lightweight and fast framework for building RESTful APIs. It allows for seamless interaction between the backend and the frontend, ensuring responsive and efficient data exchange.
+
+### Backend: File and Image Processing
+
+Another crucial aspect of the GPB system is its ability to process and edit images efficiently. These libraries help manage photo-related tasks:
+
+- **Pillow**: A simple yet powerful library that handles basic photo editing tasks like cropping, resizing, and adding filters to photos.
+- **OpenCV**: A more advanced library for high-level image manipulation, such as object detection or detailed photo enhancements, offering flexibility for more complex processing needs.
+- **Celery**: A task management tool that allows the backend to handle multiple photo-processing tasks in the background, ensuring smooth performance even during high usage.
+
+
+
+
+### Backend: QR Code Management
+
+For an easy and accessible user experience, QR codes are generated to link users to their photo sessions. This tool is essential for smooth integration between physical photo booths and the web platform:
+
+- **qrcode**: A straightforward Python library used to generate unique QR codes for each session, allowing users to quickly access and manage their photos.
+
+
+### Frontend: Web Server
+The frontend uses modern web technologies to deliver a smooth and interactive user experience:
+- **Dynamic Web Interface:** _React.js_ to build a responsive and dynamic user interface.  
+- **Core Web Development:**  _HTML5, CSS3, and JavaScript_ for creating an intuitive, cross-platform web application.  
+
+This classification ensures each backend role is addressed effectively, and the tools fit the specific tasks they are designed to handle.
+
+---
+
+## Networking and Security
+
+The GPB system prioritizes simple workflows and secure operations for users. Below are key aspects of its design:
+
+### File Management
+The backend handles file uploads, metadata, and photo editing, while the frontend focuses on presenting these files in an easy-to-navigate interface.
+
+### QR Code Workflow
+The QR code integration simplifies the user experience:
+1. The backend generates a unique QR code for each photo session.  
+2. Users scan the QR code to access their session on the web application.  
+3. Photos can be downloaded or shared directly from the app.  
+
+### Cloud Storage
+Photos and metadata are stored in reliable cloud services like *Amazon S3* or *Google Cloud Storage*. These services allow the system to expand as more users join.
+
+### Hosting Setup
+The system is deployed using a clear separation of services:
+- The **frontend server** hosts the responsive web app, handling user interactions.  
+- The **backend server** manages file processing, metadata, and QR code generation.  
+- Cloud platforms like *AWS*, *Google Cloud*, or *DigitalOcean* provide scalable hosting.  
+
+### Security Features
+To protect user data and maintain trust, the system includes the following measures:
+- **Data Encryption:** All photos and sensitive data are encrypted using *AES* before storage.  
+- **Secure Communication:** Communication between users and the system is protected using *HTTPS*.  
+- **Authentication:** *JSON Web Tokens (JWT)* are used to secure user sessions.  
+- **Privacy Compliance:** The system follows global data protection rules to maintain user privacy.
+
+These measures ensure a safe and reliable service for all users.
+
+---
+
+## Additional Details
+
+The design of the GPB system includes practical features to ensure it remains efficient and user-friendly.
+
+### Scalability
+The architecture can easily handle more users by leveraging cloud storage and separating the frontend and backend roles. This setup allows for smooth expansion without major changes to the system.
+
+### Maintenance
+With its modular structure, the system is easy to maintain. Developers can work on the frontend or backend independently, reducing the risk of downtime during updates.
+
+### User Experience
+The web application is optimized for all devices, from smartphones to desktops. QR codes simplify the workflow, making it easy for users to access, manage, and share their photos.
+
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
