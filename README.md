@@ -68,6 +68,7 @@ For detailed documentation, including textbook references, project specification
 ## Team
 - **Software Architect (Tech Lead)**: Jaehoon Song
   - Takes a broader role, overseeing the technical direction of the project, guide developers on how to implement features within the system architecture, and solving algorithmic and archiectural issues.
+  - **Member Contact**: manual20151276@gmail.com (JaehoonSong12)
 - **AAAAA**:
   - desc
 - **BBBBB**:
@@ -123,7 +124,7 @@ For detailed documentation, including textbook references, project specification
   - [Additional Details](#additional-details)
     - [Scalability](#scalability)
     - [Maintenance](#maintenance)
-    - [User Experience](#user-experience)
+    - [UX (User Experience)](#ux-user-experience)
 
 
 
@@ -314,7 +315,7 @@ The architecture can easily handle more users by leveraging cloud storage and se
 ### Maintenance
 With its modular structure, the system is easy to maintain. Developers can work on the frontend or backend independently, reducing the risk of downtime during updates.
 
-### User Experience
+### UX (User Experience)
 The web application is optimized for all devices, from smartphones to desktops. QR codes simplify the workflow, making it easy for users to access, manage, and share their photos.
 
 
