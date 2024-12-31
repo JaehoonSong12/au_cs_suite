@@ -35,6 +35,12 @@
 
 # AU-CS Suite (AUC)
 
+dsadsadfsfgadsafdsafdsafdsafdsafdsafdsafdsafdasfsdfds
+ffsdfsdfdsfdsf
+dsfdsf
+dsf
+dsfdsf
+
 ## About
 This is a repository of diverse microservices and applications developed iteratively by a team of computer science students from Auburn University, guided by a Georgia Tech senior developer (Jaehoon Song). This project emphasizes designing architectures that structure applications as a set of independently deployable, loosely coupled components, also known as services. These microservices foster scalability, modularity, and ease of maintenance.
 
@@ -177,5 +183,4 @@ For questions or suggestions, feel free to reach out to manual20151276@gmail.com
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 # Test Commit
