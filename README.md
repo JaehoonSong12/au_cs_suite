@@ -1,8 +1,4 @@
-sowon@WISH MINGW64 ~/OneDrive/Desktop/Github/au_cs_suite (main)
-$ ls
-docs/  gpb_client/  gpb_server/  LICENSE  README.mdsowon@WISH MINGW64 ~/OneDrive/Desktop/Github/au_cs_suite (main)
-$ ls
-docs/  gpb_client/  gpb_server/  LICENSE  README.md<!-- 
+
  @requires
  1. VSCode extension: Markdown Preview Enhanced
  2. Shortcut: 'Ctrl' + 'Shift' + 'V'
