@@ -70,9 +70,9 @@ For detailed documentation, including textbook references, project specification
   - Takes a broader role, overseeing the technical direction of the project, guide developers on how to implement features within the system architecture, and solving algorithmic and archiectural issues.
   - **Member Contact**: manual20151276@gmail.com (JaehoonSong12)
 - **AAAAA**:
-  - desc
-- **BBBBB**:
-  - desc
+- **Networking and Security**: Subeen Kim
+  - Ensures secure operations and efficient networking for the GPB system. Focused on designing and implementing robust security features and seamless user workflows.
+  - **Member Contact**: [szk0239@gmail.com](mailto:szk0239@gmail.com)
 
 ## Features
 - **Microservice Architecture**: Applications are structured as independent, deployable components to ensure flexibility and scalability.
