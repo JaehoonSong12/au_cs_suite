@@ -560,7 +560,10 @@ function INIT_PVM {
         rm "${PROJ_EXT}/get-pip.py"                                                         # clean PIP script
         ${PYTHON_DIR//\{VERSION\}/$ver}/Scripts/pip install tox                             # test automation (by virtualenv) 
         ${PYTHON_DIR//\{VERSION\}/$ver}/Scripts/pip install poetry                          # [1] build automation (by virtualenv, setuptools) 
-        ${PYTHON_DIR//\{VERSION\}/$ver}/Scripts/pip install pipreqs
+        ${PYTHON_DIR//\{VERSION\}/$ver}/Scripts/pip install pipreqs --use-pep517
+        # ${PYTHON_DIR//\{VERSION\}/$ver}/Scripts/pip install setuptools    # autobuild, src/built distro
+        # ${PYTHON_DIR//\{VERSION\}/$ver}/Scripts/pip install --upgrade setuptools wheel
+        # ${PYTHON_DIR//\{VERSION\}/$ver}/Scripts/pip install pipreqs --use-pep517
     done
     # PVM checkup (negative)
     if [[ ! -d "$PROJ_EXT" ]]; then

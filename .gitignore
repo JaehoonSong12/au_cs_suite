@@ -268,7 +268,7 @@ gpb_client_test/node_modules/
 .bashrc
 99-nodejs-setup.sh
 package-lock.json
-package.json
+
 
 # automation scripts (.bat / .sh / .pl)
 scripts/
