@@ -1,4 +1,4 @@
-
+<!-- 
  @requires
  1. VSCode extension: Markdown Preview Enhanced
  2. Shortcut: 'Ctrl' + 'Shift' + 'V'
@@ -27,8 +27,6 @@
  -->
 <!-- Anchor Tag (Object) for "back to top" -->
 <a id="readme-top"></a> 
-
-
 
 
 
