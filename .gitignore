@@ -35,7 +35,7 @@ MANIFEST
 #  Usually these files are written by a python script from a template
 #  before PyInstaller builds the exe, so as to inject date/other infos into it.
 *.manifest
-# *.spec
+*.spec
 
 # Installer logs
 pip-log.txt
@@ -268,8 +268,6 @@ gpb_client_test/node_modules/
 .bashrc
 99-nodejs-setup.sh
 package-lock.json
-package.json
-
 # automation scripts (.bat / .sh / .pl)
 scripts/
 
