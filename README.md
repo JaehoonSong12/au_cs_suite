@@ -72,8 +72,9 @@ For detailed documentation, including textbook references, project specification
 - **AI/Aiga/UI/UX**: Sowon Lim
   - My role is AI/Aiga/UI/UX. I am willingly committed to supporting other areas whenever needed as well. Additionally, I can take full responsibility for business aspects and am confident in handling them flawlessly! After the development phase, you can trust me with everything, including managing profits fairly. Even if we base our software development on an existing photo booth, I want to aim to create the best version by incorporating our unique ideas and making it truly exceptional.
   - **Member Contact**: sowonlim0210@gmail.com (wish)
-- **BBBBB**:
-  - desc
+- **Networking and Security**: Subeen Kim
+  - Ensures secure operations and efficient networking for the GPB system. Focused on designing and implementing robust security features and seamless user workflows.
+  - **Member Contact**: [szk0239@gmail.com](mailto:szk0239@gmail.com)
 
 ## Features
 - **Microservice Architecture**: Applications are structured as independent, deployable components to ensure flexibility and scalability.
