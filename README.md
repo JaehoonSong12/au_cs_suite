@@ -31,8 +31,6 @@
 
 
 
-
-
 # AU-CS Suite (AUC)
 
 dsadsadfsfgadsafdsafdsafdsafdsafdsafdsafdsafdasfsdfds
@@ -69,10 +67,14 @@ For detailed documentation, including textbook references, project specification
 - **Software Architect (Tech Lead)**: Jaehoon Song
   - Takes a broader role, overseeing the technical direction of the project, guide developers on how to implement features within the system architecture, and solving algorithmic and archiectural issues.
   - **Member Contact**: manual20151276@gmail.com (JaehoonSong12)
-- **AAAAA**:
-  - desc
-- **BBBBB**:
-  - desc
+
+- **AI/Aiga/UI/UX**: Sowon Lim
+  - My role is AI/Aiga/UI/UX. I am willingly committed to supporting other areas whenever needed as well. Additionally, I can take full responsibility for business aspects and am confident in handling them flawlessly! After the development phase, you can trust me with everything, including managing profits fairly. Even if we base our software development on an existing photo booth, I want to aim to create the best version by incorporating our unique ideas and making it truly exceptional.
+  - **Member Contact**: sowonlim0210@gmail.com (wish)
+- **Networking and Security**: Subeen Kim
+  - Ensures secure operations and efficient networking for the GPB system. Focused on designing and implementing robust security features and seamless user workflows.
+  - **Member Contact**: [selline0824@gmail.com](Subeen)
+
 
 ## Features
 - **Microservice Architecture**: Applications are structured as independent, deployable components to ensure flexibility and scalability.
