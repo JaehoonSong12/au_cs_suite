@@ -74,7 +74,7 @@ For detailed documentation, including textbook references, project specification
   - **Member Contact**: sowonlim0210@gmail.com (wish)
 - **Networking and Security**: Subeen Kim
   - Ensures secure operations and efficient networking for the GPB system. Focused on designing and implementing robust security features and seamless user workflows.
-  - **Member Contact**: [szk0239@gmail.com](mailto:szk0239@gmail.com)
+  - **Member Contact**: [selline0824@gmail.com](Subeen)
 
 ## Features
 - **Microservice Architecture**: Applications are structured as independent, deployable components to ensure flexibility and scalability.
