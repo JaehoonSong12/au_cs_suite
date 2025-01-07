@@ -25,4 +25,7 @@ fi
 ############################################
 ########## Shell Script (Scripts) ##########
 ############################################
-poetry run python gpb_server/cli/app.py
+poetry run python cli.py
+# poetry run python gpb_server/cli/app.py
+# poetry run python gui.py
+# poetry run python gpb_server/gui/app.py
