@@ -142,21 +142,62 @@ For detailed documentation, including textbook references, project specification
 
 ## Repository Structure
 ```plaintext
-/src
-   /main
-      /java
-      /kotlin
-      /python
+/python-package1
+   /...
+/python-package2
+   /...
+/jvm-module1
+   /src
+      /main
+         /java
+         /kotlin
+         /...
+      /test
+         /java
+         /kotlin
+         /...
+/jvm-module2
+   /src
+      /main
+         /java
+         /kotlin
+         /...
+      /test
+         /java
+         /kotlin
+         /...
+/nodejs-app
+   /public
+      /css
+      /js
+      /images
+      /...
+   /src
+      /routes
+      /controllers
+      /models
       /...
    /tests
-      /java
-      /kotlin
-      /python
+      /unit
+      /integration
       /...
+   package.json
+   app.js
 README.md
 ```
 
-The repository uses a Gradle-style directory structure. Each language-specific folder under `src` can have its own execution points, such as `cli` for command-line interfaces and `gui` for graphical user interfaces. Testing directories for each language are located under `tests`.
+
+The repository structure is organized to integrate Python packages, JVM modules, and Node.js components.  
+
+Directories such as `/python-package1` and `/python-package2` are designated as standalone Python packages, with unique functionalities placed in each.  
+
+Directories like `/jvm-module1` and `/jvm-module2` are arranged in a Gradle module structure. The `/src/main/` directory is allocated for the primary source code, which is further divided by programming languages, such as Java and Kotlin. Corresponding test cases are included in `/src/test/`.  
+
+A Node.js application is accommodated with its structure. The `/public` directory is used to store static assets, including CSS, JavaScript, and images. The `/src` directory is reserved for the application logic, organized into subdirectories for routes, controllers, models, and others. Testing directories are divided into unit and integration tests under `/tests`. The `package.json` file is provided for Node.js package configuration, and `app.js` serves as the entry point for the application.  
+
+This structure is designed to clearly separate components, making it suitable for projects involving multiple programming languages.
+
+
 
 ## Getting Started
 1. **Clone the Repository**
