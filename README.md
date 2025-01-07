@@ -105,6 +105,8 @@ For detailed documentation, including textbook references, project specification
   - [Contact](#contact)
 - [Service #1: Global Photo Booth (GPB)](#service-1-global-photo-booth-gpb)
   - [System Architecture](#system-architecture)
+    - [Instructions: Frontend (React)](#instructions-frontend-react)
+    - [Instructions: Backend (Python)](#instructions-backend-python)
   - [Programming Language, Libraries, and Framework](#programming-language-libraries-and-framework)
     - [Backend: API Management](#backend-api-management)
     - [Backend: File and Image Processing](#backend-file-and-image-processing)
@@ -269,6 +271,110 @@ The GPB system is built on a **client-server architecture** that separates the r
 - **QR Code Integration:** Unique QR codes link users directly to their photo sessions.
 
 This architecture ensures that users have a consistent and efficient experience while making it easy to maintain and expand the system.
+
+
+### Instructions: Frontend (React)
+
+The GPB frontend is powered by Node.js and is designed to handle all client-side responsibilities. Follow these steps to set up and run the frontend:
+
+1. **Ensure Node.js and NPM are Installed**  
+   The script checks for the required packages, including `web-vitals`, `axios`, and `tailwindcss`. If any of these packages are missing, they will be installed automatically.
+
+2. **Install Dependencies**  
+   Check and install the required dependencies using npm:
+```bash
+# Check if web-vitals is installed
+if ! npm list web-vitals > /dev/null 2>&1; then
+  npm install web-vitals                            # Performance monitoring
+fi
+
+# Check if axios is installed
+if ! npm list axios > /dev/null 2>&1; then
+  npm install axios                                 # HTTP requests
+fi
+
+# Check if tailwindcss is installed
+if ! npm list tailwindcss > /dev/null 2>&1; then
+  npm install -D tailwindcss postcss autoprefixer   # CSS Styling framework
+  npx tailwindcss init
+fi
+```
+
+3. **Build the Frontend**  
+   Install all the required npm packages and build the project:
+```bash
+npm install
+npm run build
+```
+4. **Run the Frontend**  
+   Start the frontend server using npm:
+```bash
+npm start
+```
+
+By following these steps, the GPB frontend can be configured, built, and executed to support the system's user interface (frontend functional requirements).
+
+
+### Instructions: Backend (Python)
+
+The GPB backend is powered by Python and is designed to handle all server-side responsibilities. Follow these steps to set up and run the backend:
+
+1. **Ensure Python is Installed**  
+   The script checks for `python3` or `python`. If neither is installed, you will need to install Python before proceeding.
+
+2. **Install Dependencies**  
+   Required tools and libraries, including `poetry`, `tox`, and `pipreqs`, are automatically checked and installed if missing:
+```bash
+if command -v python3 &>/dev/null; then
+    PYTHON_CMD=python3
+    PIP_CMD=pip3
+elif command -v python &>/dev/null; then
+    PYTHON_CMD=python
+    PIP_CMD=pip
+else
+    echo -e "${RED}Python is not installed. Please install Python and try again.${NC}"
+    exit 1
+fi
+
+if ! command -v poetry &>/dev/null; then
+    echo -e "\033[0;33mpoetry is not installed. Installing...\033[0m"
+    $PIP_CMD install poetry
+fi
+
+if ! command -v tox &>/dev/null; then
+    echo -e "\033[0;33mtox is not installed. Installing...\033[0m"
+    $PIP_CMD install tox
+fi
+
+if ! command -v pipreqs &>/dev/null; then
+    echo -e "\033[0;33mpipreqs is not installed. Installing...\033[0m"
+    $PIP_CMD install pipreqs
+fi
+```
+
+3. **Initialize the Environment**  
+   Generate dependencies, manage them with `poetry`, and install additional tools:
+```bash
+pipreqs . --ignore "ext/" --force    # Generate dependencies
+poetry add $(cat requirements.txt)   # Add dependencies to Poetry
+poetry run pip install python-multipart
+rm requirements.txt                  # Clean up
+```
+
+4. **Build the Backend**  
+   Compile the backend into a distributable format using `poetry` and `pyinstaller`:
+```bash
+poetry build
+poetry run pyinstaller --onefile cli.py
+```
+
+5. **Run the Server**  
+   Start the backend server using standalone-executable in `dist/cli`. Optionally, start the backend server using `poetry`:
+```bash
+poetry run cli_gpb_server
+```
+
+By following these steps, the GPB backend can be configured, built, and executed to support the system's backend functionalities.
 
 ---
 
