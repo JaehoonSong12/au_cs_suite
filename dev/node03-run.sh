@@ -28,23 +28,7 @@ fi
 cd gpb_client_admin                          # Admin Mode
 # cd gpb_client                             # Client Mode
 
+npm start
 
-# Check if web-vitals is installed
-if ! npm list web-vitals > /dev/null 2>&1; then
-  npm install web-vitals                            # Performance monitoring
-fi
-# Check if axios is installed
-if ! npm list axios > /dev/null 2>&1; then
-  npm install axios                                 # HTTP requests
-fi
-# Check if tailwindcss is installed
-if ! npm list tailwindcss > /dev/null 2>&1; then
-  npm install -D tailwindcss postcss autoprefixer   # CSS Styling framework
-  npx tailwindcss init
-fi
-
-### Standalone Distribution
-# npm install -g nexe
-# nexe server.js --build
 
 cd ..
