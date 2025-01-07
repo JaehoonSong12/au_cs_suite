@@ -1,9 +1,6 @@
 #!/bin/bash
 if [ -f ~/.bashrc ]; then
     source ~/.bashrc
-else
-    echo -e "\033[1;31mError: ~/.bashrc not found. Exiting...\033[0m"
-    exit 1
 fi
 # /usr
 if [[ "$OSTYPE" == "msys" || "$OSTYPE" == "cygwin" ]]; then          # Windows
