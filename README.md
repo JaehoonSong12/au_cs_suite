@@ -263,7 +263,7 @@ The **Global Photo Booth** (GPB), also known as *Snap & Share*, offers a fun and
 
 The GPB system is built on a **client-server architecture** that separates the roles of the frontend and backend for better organization and future scalability. Here’s a breakdown of the system's key components:
 
-- **Frontend:** A responsive web client that works on multiple devices without requiring any software installation.  
+- **Frontend:** A React-powered responsive web client that works on multiple devices without requiring any software installation.  
 - **Backend:** A Python-powered server responsible for handling file storage, photo editing, and metadata management.  
 - **Cloud Storage:** Photos and session data are stored on scalable platforms like Amazon S3 or Google Cloud.  
 - **QR Code Integration:** Unique QR codes link users directly to their photo sessions.
