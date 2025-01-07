@@ -186,7 +186,8 @@ We welcome contributions! If you would like to suggest improvements, please subm
 
 
 ## License
-This is free and unencumbered software released into the public domain.
+
+This project is licensed under the MIT License. See the [LICENSE](./LICENSE) file for details.
 
 
 ## Contact
