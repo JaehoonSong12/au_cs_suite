@@ -197,10 +197,9 @@ The repository structure is arranged to incorporate Python packages, JVM modules
 - The Node.js application is designed to be consistent in static assets, logic, and configurations.  
   - The `/public` directory is employed for storing static assets, such as CSS, JavaScript, and images.  
   - The `/src` directory is responsible for the application’s core logic, structured into subdirectories for routes, react components, and so on ...  
-  - Testing directories, divided into unit and integration categories, are provided under `/tests`.  
   - The `package.json` file is included to define package dependencies, while `app.js` serves as the entry point for application execution.  
 
-This configuration supports projects involving multiple programming languages and frameworks, fostering maintainability and scalability.
+This configuration supports projects involving multiple programming languages and frameworks, increasing maintainability and scalability.
 
 
 
