@@ -26,5 +26,8 @@ fi
 ########## Shell Script (Scripts) ##########
 ############################################
 poetry build
-poetry run pyinstaller --onefile dist.py
-poetry run cli_gpb_server
+poetry run pyinstaller --onefile cli.py
+# poetry run pyinstaller --onefile gui.py
+
+# poetry run cli_gpb_server
+# poetry run gui_gpb_server

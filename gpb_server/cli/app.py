@@ -106,11 +106,11 @@ def test():
         print("Failed to fetch data. Status Code:", response.status_code)
 
 
-def main():
+def run():
     print("Your App is running... at http://127.0.0.1:8000/docs")
     test()
     # Run the application using Uvicorn, specify host as '127.0.0.1' for local access
     uvicorn.run(app, host="127.0.0.1", port=8000)
 
 if __name__ == "__main__":
-    main()
+    run()

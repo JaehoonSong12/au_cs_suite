@@ -1,6 +1,9 @@
 #!/bin/bash
 if [ -f ~/.bashrc ]; then
     source ~/.bashrc
+else
+    echo -e "\033[1;31mError: ~/.bashrc not found. Exiting...\033[0m"
+    exit 1
 fi
 # /usr
 if [[ "$OSTYPE" == "msys" || "$OSTYPE" == "cygwin" ]]; then          # Windows
@@ -35,17 +38,17 @@ else
 fi
 if ! command -v poetry &>/dev/null; then
     echo -e "\033[0;33mpoetry is not installed. Installing...\033[0m"
-    $PIP_CMD install poetry # build tool
+    $PIP_CMD install poetry
 fi
 if ! command -v tox &>/dev/null; then
     echo -e "\033[0;33mtox is not installed. Installing...\033[0m"
-    $PIP_CMD install tox # test tool
+    $PIP_CMD install tox
 fi
 if ! command -v pipreqs &>/dev/null; then
     echo -e "\033[0;33mpipreqs is not installed. Installing...\033[0m"
-    $PIP_CMD install pipreqs # dependcy tool
+    $PIP_CMD install pipreqs
 fi
-
 pipreqs . --ignore "ext/" --force   # dependency generate
-poetry add $(cat requirements.txt)  # dependency control (pyproject.toml)
+poetry add $(cat requirements.txt)  # dependency control
 rm requirements.txt                 # clean 
+poetry run pip install python-multipart
