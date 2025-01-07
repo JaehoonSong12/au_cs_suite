@@ -1,53 +1,38 @@
-# gpb_server.cli.app.py
-import requests
+# gpb_server/cli/app.py
+
 from fastapi import FastAPI, UploadFile, File, HTTPException
 from fastapi.responses import FileResponse
-import csv
-import os
 from datetime import datetime
+from gpb_server.utils import image_io, data_io
 import uvicorn
-
-
-
-
 
 app = FastAPI()
 
-# Paths
-IMAGES_DIR = "data/images"
-CSV_FILE = "data/data.csv"
-
-# Ensure directories exist
-os.makedirs(IMAGES_DIR, exist_ok=True)
-
-# Ensure CSV file exists
-if not os.path.exists(CSV_FILE):
-    with open(CSV_FILE, mode="w", newline="") as file:
-        writer = csv.writer(file)
-        writer.writerow(["filename", "upload_time"])  # Write headers
-
-
 @app.post("/upload/")
 async def upload_image(file: UploadFile = File(...)):
+    """
+    Create (Upload) an image file and update the CSV with the file's information.
+
+    Args:
+        file (UploadFile): The image file to be uploaded.
+
+    Returns:
+        dict: A success message with the uploaded file's name.
+    """
     # Log the received file information
     print(f"Received file: {file.filename}")
 
-    # Save the image
+    # Save the image using the image_create function
     try:
-        file_path = os.path.join(IMAGES_DIR, file.filename)
-        print(f"Saving file to {file_path}")
-        with open(file_path, "wb") as image_file:
-            image_file.write(await file.read())
-        print(f"File saved successfully: {file.filename}")
+        await image_io.image_create(file)  # Await the async function to save the image asynchronously
+        print(f"File {file.filename} uploaded successfully!")
     except Exception as e:
         print(f"Error saving file: {e}")
         raise HTTPException(status_code=500, detail="Error saving the file")
 
     # Update the CSV file
     try:
-        with open(CSV_FILE, mode="a", newline="") as csv_file:
-            writer = csv.writer(csv_file)
-            writer.writerow([file.filename, datetime.utcnow().isoformat()])
+        await data_io.csv_update(file.filename, datetime.utcnow().isoformat())  # Add 'await' here
         print(f"File entry added to CSV: {file.filename}")
     except Exception as e:
         print(f"Error updating CSV: {e}")
@@ -57,46 +42,48 @@ async def upload_image(file: UploadFile = File(...)):
 
 @app.get("/images/")
 def list_images():
-    # Read filenames from the CSV file
-    if not os.path.exists(CSV_FILE):
-        raise HTTPException(status_code=404, detail="CSV file not found")
+    """
+    Read (Retrieve) the list of all uploaded images from the CSV file.
 
-    with open(CSV_FILE, mode="r") as file:
-        reader = csv.DictReader(file)
-        images = [{"filename": row["filename"], "upload_time": row["upload_time"]} for row in reader]
-
+    Returns:
+        dict: A dictionary containing a list of images with filenames and upload times.
+    """
+    images = data_io.csv_read()
     return {"images": images}
 
 @app.get("/images/{filename}")
 def download_image(filename: str):
-    # Check if the file exists
-    file_path = os.path.join(IMAGES_DIR, filename)
-    if not os.path.exists(file_path):
-        raise HTTPException(status_code=404, detail="File not found")
+    """
+    Read (Retrieve) a specific image by filename and return it for download.
 
+    Args:
+        filename (str): The name of the file to download.
+
+    Returns:
+        FileResponse: The image file for download.
+    """
+    file_path = image_io.image_read(filename)
     return FileResponse(file_path, media_type="image/jpeg", filename=filename)
 
 @app.delete("/images/{filename}")
 def delete_image(filename: str):
-    # Delete the image file
-    file_path = os.path.join(IMAGES_DIR, filename)
-    if not os.path.exists(file_path):
-        raise HTTPException(status_code=404, detail="File not found")
-    os.remove(file_path)
+    """
+    Delete an image file and remove its entry from the CSV file.
 
-    # Remove the entry from the CSV file
-    rows = []
-    with open(CSV_FILE, mode="r") as file:
-        reader = csv.reader(file)
-        rows = [row for row in reader if row[0] != filename]
+    Args:
+        filename (str): The name of the file to delete.
 
-    with open(CSV_FILE, mode="w", newline="") as file:
-        writer = csv.writer(file)
-        writer.writerows(rows)
-
+    Returns:
+        dict: A success message confirming deletion.
+    """
+    image_io.image_delete(filename)
+    data_io.csv_delete(filename)
     return {"message": f"File {filename} deleted successfully!"}
 
 
+
+
+import requests
 
 def test():    
     response = requests.get("https://jsonplaceholder.typicode.com/todos/1")

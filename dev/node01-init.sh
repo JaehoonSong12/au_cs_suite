@@ -1,6 +1,9 @@
 #!/bin/bash
 if [ -f ~/.bashrc ]; then
     source ~/.bashrc
+else
+    echo -e "\033[1;31mError: ~/.bashrc not found. Exiting...\033[0m"
+    exit 1
 fi
 # /usr
 if [[ "$OSTYPE" == "msys" || "$OSTYPE" == "cygwin" ]]; then          # Windows
@@ -22,7 +25,16 @@ fi
 ############################################
 ########## Shell Script (Scripts) ##########
 ############################################
-cd gpb_client_test
-npm install axios                           # npm install
+cd gpb_client_test                            # Admin Mode
+# cd gpb_client                                   # Client Mode
+npm install
 npm start
 cd ..
+
+### React JS (Library)
+# npm install web-vitals
+# npm install axios
+
+### Tailwind CSS
+# npm install -D tailwindcss postcss autoprefixer
+# npx tailwindcss init
