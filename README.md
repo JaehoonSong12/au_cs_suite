@@ -186,16 +186,21 @@ For detailed documentation, including textbook references, project specification
 README.md
 ```
 
+The repository structure is arranged to incorporate Python packages, JVM modules, and Node.js components while ensuring modularity and organization.  
 
-The repository structure is organized to integrate Python packages, JVM modules, and Node.js components.  
+- Python packages, such as `/python-package1` and `/python-package2`, are configured as independent units, with specific functionalities assigned to each directory.  
 
-Directories such as `/python-package1` and `/python-package2` are designated as standalone Python packages, with unique functionalities placed in each.  
+- JVM modules, including `/jvm-module1` and `/jvm-module2`, are structured to align with Gradle module conventions.  
+  - Within these, `/src/main/` directories are utilized for primary source code, which is categorized by programming language (e.g., Java, Kotlin).  
+  - Corresponding tests are organized under `/src/test/`, ensuring a clear separation between implementation and validation.  
 
-Directories like `/jvm-module1` and `/jvm-module2` are arranged in a Gradle module structure. The `/src/main/` directory is allocated for the primary source code, which is further divided by programming languages, such as Java and Kotlin. Corresponding test cases are included in `/src/test/`.  
+- The Node.js application is designed to streamline static assets, logic, and configurations.  
+  - The `/public` directory is employed for storing static assets, such as CSS, JavaScript, and images.  
+  - The `/src` directory accommodates the application’s core logic, structured into subdirectories for routes, controllers, and models.  
+  - Testing directories, divided into unit and integration categories, are provided under `/tests`.  
+  - The `package.json` file is included to define package dependencies, while `app.js` serves as the entry point for application execution.  
 
-A Node.js application is accommodated with its structure. The `/public` directory is used to store static assets, including CSS, JavaScript, and images. The `/src` directory is reserved for the application logic, organized into subdirectories for routes, controllers, models, and others. Testing directories are divided into unit and integration tests under `/tests`. The `package.json` file is provided for Node.js package configuration, and `app.js` serves as the entry point for the application.  
-
-This structure is designed to clearly separate components, making it suitable for projects involving multiple programming languages.
+This configuration supports projects involving multiple programming languages and frameworks, fostering maintainability and scalability.
 
 
 
