@@ -194,7 +194,7 @@ The repository structure is arranged to incorporate Python packages, JVM modules
   - Within these, `/src/main/` directories are utilized for primary source code, which is categorized by programming language (e.g., Java, Kotlin).  
   - Corresponding tests are organized under `/src/test/`, ensuring a clear separation between implementation and validation.  
 
-- The Node.js application is designed to streamline static assets, logic, and configurations.  
+- The Node.js application is designed to be consistent in static assets, logic, and configurations.  
   - The `/public` directory is employed for storing static assets, such as CSS, JavaScript, and images.  
   - The `/src` directory accommodates the application’s core logic, structured into subdirectories for routes, controllers, and models.  
   - Testing directories, divided into unit and integration categories, are provided under `/tests`.  
