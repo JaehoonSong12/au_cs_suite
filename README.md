@@ -332,7 +332,7 @@ elif command -v python &>/dev/null; then
     PYTHON_CMD=python
     PIP_CMD=pip
 else
-    echo -e "${RED}Python is not installed. Please install Python and try again.${NC}"
+    echo -e "\033[0;33Python is not installed. Please install Python and try again.\033[0m"
     exit 1
 fi
 
