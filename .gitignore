@@ -457,6 +457,8 @@ gpb_server/app/
 .bashrc
 99-nodejs-setup.sh
 package-lock.json
+
+my-react-app/
 # automation scripts (.bat / .sh / .pl)
 scripts/
 
