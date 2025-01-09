@@ -1,23 +1,26 @@
 [tool.poetry]
 name = "gpb_server"
-version = "0.1.0"
+version = "1.2.0"
 description = "My package description"
 authors = ["JaehoonSong12 <manual20151276@gmail.com>"]
 readme = "README.md"
 
+
 [tool.poetry.dependencies]
 python = ">=3.10,<3.14"
+python-multipart = "^0.0.20"
+aiofiles = "24.1.0"
 fastapi = "0.115.6"
 flask = "3.1.0"
 numpy = "2.2.1"
 pygame = "2.6.1"
 requests = "2.32.3"
 uvicorn = "0.34.0"
-aiofiles = "24.1.0"
 
 [tool.poetry.scripts]
-cli_gpb_server = "cli:entry"
-# gui_gpb_server = "gui:entry"
+gpb = "gpb_server.app.__main__:entry"
+gpb_cli = "gpb_server.app.cli.app:run"
+gpb_gui = "gpb_server.app.gui.app:run"
 
 [tool.poetry.group.dev.dependencies]
 pyinstaller = "^6.11.1"

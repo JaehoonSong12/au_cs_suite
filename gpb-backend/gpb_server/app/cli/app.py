@@ -1,4 +1,4 @@
-# gpb_server/cli/app.py
+# gpb/cli/app.py
 
 from fastapi import FastAPI, UploadFile, File, HTTPException
 from fastapi.responses import FileResponse
