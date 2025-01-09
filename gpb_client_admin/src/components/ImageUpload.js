@@ -1,48 +1,27 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import refreshManager from '../utils/RefreshManager';
 
-/**
- * Component for uploading an image to the server.
- * @param {Object} props - The component props.
- * @param {Function} props.onUploadSuccess - Callback to notify parent on successful upload.
- */
-function ImageUpload({ onUploadSuccess }) {
+function ImageUpload() {
   const [file, setFile] = useState(null);
 
-  /**
-   * Handles file input change and updates the file state.
-   * @param {Event} e - The change event triggered by file input.
-   */
   const handleFileChange = (e) => {
     setFile(e.target.files[0]);
   };
 
-  /**
-   * Sends the selected file to the server via POST request.
-   * On success, alerts the user and triggers the `onUploadSuccess` callback.
-   */
   const handleUpload = async () => {
-    if (!file) {
-      alert('Please select a file before uploading.');
-      return;
-    }
-
     const formData = new FormData();
     formData.append('file', file);
 
     try {
-      // API POST request to upload the image
       const response = await axios.post('/upload/', formData, {
         headers: {
-          'Content-Type': 'multipart/form-data', // Ensures file is sent properly
+          'Content-Type': 'multipart/form-data',
         },
       });
-      alert(response.data.message); // Notify user of success
-      if (onUploadSuccess) {
-        onUploadSuccess(); // Refresh image list in parent
-      }
+      alert(response.data.message);
+      refreshManager.triggerRefresh(); // Trigger refresh via singleton
     } catch (error) {
-      console.error('Error uploading file:', error);
       alert('Error uploading file');
     }
   };
