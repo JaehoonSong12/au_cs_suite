@@ -32,6 +32,7 @@ fi
 ############################################
 ########## Shell Script (Scripts) ##########
 ############################################
+poetry install
 poetry run gpb
-poetry run gpb_cli
-poetry run gpb_gui
+# poetry run gpb_cli
+# poetry run gpb_gui
