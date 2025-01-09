@@ -1,46 +1,38 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
+import refreshManager from '../utils/RefreshManager';
 
-/**
- * Component for displaying a list of uploaded images.
- * @param {Object} props - The component props.
- * @param {boolean} props.refresh - A flag to trigger re-fetching of the image list.
- */
-function ImageList({ refresh }) {
+function ImageList() {
   const [images, setImages] = useState([]);
 
-  /**
-   * Fetches the list of images from the server.
-   * Executes whenever the `refresh` flag changes.
-   */
   useEffect(() => {
     const fetchImages = async () => {
       try {
-        // API GET request to retrieve image list
         const response = await axios.get('/images/');
-        setImages(response.data.images); // Update state with fetched images
+        setImages(response.data.images);
       } catch (error) {
-        console.error('Error fetching images:', error);
         alert('Error fetching images');
       }
     };
 
-    fetchImages();
-  }, [refresh]); // Dependency array ensures fetchImages runs on refresh
+    const refreshHandler = () => {
+      fetchImages();
+    };
 
-  /**
-   * Deletes an image from the server by filename.
-   * @param {string} filename - The name of the file to delete.
-   */
+    refreshManager.register(refreshHandler);
+    fetchImages(); // Initial fetch
+
+    return () => {
+      refreshManager.unregister(refreshHandler);
+    };
+  }, []);
+
   const handleDelete = async (filename) => {
     try {
-      // API DELETE request to remove the image
       await axios.delete(`/images/${filename}`);
-      // Remove deleted image from local state
-      setImages(images.filter((image) => image.filename !== filename));
+      refreshManager.triggerRefresh(); // Trigger refresh via singleton
       alert('File deleted successfully');
     } catch (error) {
-      console.error('Error deleting file:', error);
       alert('Error deleting file');
     }
   };
@@ -61,7 +53,6 @@ function ImageList({ refresh }) {
               </p>
             </div>
             <div className="flex items-center gap-4">
-              {/* Button to download the image */}
               <a
                 href={`/images/${image.filename}`}
                 target="_blank"
@@ -70,7 +61,6 @@ function ImageList({ refresh }) {
               >
                 Download
               </a>
-              {/* Button to delete the image */}
               <button
                 onClick={() => handleDelete(image.filename)}
                 className="px-3 py-1 bg-red-500 text-white text-sm font-semibold rounded-lg hover:bg-red-600"
