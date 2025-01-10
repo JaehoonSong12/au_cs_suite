@@ -5,11 +5,12 @@
  */
 
 const fs = require('fs');
+const http = require('http');
 const https = require('https');
 const cors = require('cors');
-const ip = require('ip');
 
 const express = require('express');
+const ip = require('ip');
 const path = require('path');
 const kleur = require('kleur');
 const { createProxyMiddleware } = require('http-proxy-middleware');
@@ -31,23 +32,7 @@ function drawBox(message) {
 
 const app = express();
 const PORT = process.env.PORT || 3000; // Port to run the server
-// HTTPS options: Replace with your SSL certificates
-const httpsOptions = {
-  key: fs.readFileSync(path.join(__dirname, 'certs', 'key.pem')), // Path to SSL private key
-  cert: fs.readFileSync(path.join(__dirname, 'certs', 'cert.pem')), // Path to SSL certificate
-};
 
-// Middleware: Set Content Security Policy (CSP) for secure camera access
-app.use((req, res, next) => {
-  res.setHeader(
-    'Content-Security-Policy',
-    "default-src 'self'; media-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline';"
-  );
-  next();
-});
-
-// Middleware: Enable CORS for cross-origin requests (adjust origin if needed)
-app.use(cors({ origin: '*' }));
 
 
 /**
@@ -114,16 +99,48 @@ app.use((err, req, res, next) => {
   res.status(500).send('Server Error');
 });
 
+
+
+
+
+
+
+
+
+// // Middleware: Set Content Security Policy (CSP) for secure camera access
+// app.use((req, res, next) => {
+//   res.setHeader(
+//     'Content-Security-Policy',
+//     "default-src 'self'; media-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline';"
+//   );
+//   next();
+// });
+
+// // Middleware: Enable CORS for cross-origin requests (adjust origin if needed)
+// app.use(cors({ origin: '*' }));
+
+
+
+// // HTTPS options: Replace with your SSL certificates
+// const httpsOptions = {
+//   key: fs.readFileSync(path.join(__dirname, 'certs', 'key.pem')), // Path to SSL private key
+//   cert: fs.readFileSync(path.join(__dirname, 'certs', 'cert.pem')), // Path to SSL certificate
+// };
+
 // Create and start the HTTPS server
-const server = https.createServer(httpsOptions, app);
+// const server = https.createServer(httpsOptions, app);
+const server = http.createServer(app);
+
+
+
 
 /**
  * Starts the Express server.
  * Logs local and network URLs using kleur and for enhanced output.
  */
-app.listen(PORT, () => {
-  const localUrl = `https://localhost:${PORT}`;
-  const networkUrl = `https://${ip.address()}:${PORT}`;
+server.listen(PORT, () => {
+  const localUrl = `http://localhost:${PORT}`;
+  const networkUrl = `http://${ip.address()}:${PORT}`;
 
   console.log(
     'This is an obtimized production build (offical deployment)\n'
