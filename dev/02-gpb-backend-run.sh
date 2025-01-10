@@ -6,6 +6,13 @@ else
     exit 1
 fi
 # /usr
+
+cd gpb-backend
+
+
+
+
+
 if [[ "$OSTYPE" == "msys" || "$OSTYPE" == "cygwin" ]]; then          # Windows
     if ! python --version 2>/dev/null && ! python3 --version 2>/dev/null; then
         INIT_PVM
@@ -25,6 +32,7 @@ fi
 ############################################
 ########## Shell Script (Scripts) ##########
 ############################################
-poetry build
-poetry run pyinstaller --onefile cli.py
-# poetry run pyinstaller --onefile gui.py
+poetry install
+poetry run gpb
+# poetry run gpb_cli
+# poetry run gpb_gui

@@ -25,12 +25,5 @@ fi
 ############################################
 ########## Shell Script (Scripts) ##########
 ############################################
-# poetry run python cli.py
-# poetry run python gpb_server/cli/app.py
-# poetry run cli_gpb_server
-
-
-
-# poetry run python gui.py
-# poetry run python gpb_server/gui/app.py
-# poetry run gui_gpb_server
+# instantiate_bash "." "dev/01-gpb-backend-build.sh"
+opens "gpb-backend/dist/win/gpb_server-1.2.0-win.exe"
