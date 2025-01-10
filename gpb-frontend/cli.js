@@ -3,23 +3,37 @@
  * @description Express-based server for serving a React frontend, proxying API requests, 
  *              and providing console output with kleur for enhanced readability.
  */
+
+const fs = require('fs');
+const http = require('http');
+const https = require('https');
+const cors = require('cors');
+
 const express = require('express');
+const ip = require('ip');
 const path = require('path');
 const kleur = require('kleur');
 const { createProxyMiddleware } = require('http-proxy-middleware');
 
+/**
+ * Utility: Draw a message in a styled box for better console readability
+ * @param {string} message - The message to display
+ * @returns {string} The styled box containing the message
+ */
 function drawBox(message) {
   const lines = message.split('\n');
-  const width = Math.max(...lines.map(line => line.length));
+  const width = Math.max(...lines.map((line) => line.length));
   const horizontalLine = '─'.repeat(width + 4);
   const top = `┌${horizontalLine}┐`;
   const bottom = `└${horizontalLine}┘`;
-  const middle = lines.map(line => `│  ${line.padEnd(width)}  │`).join('\n');
+  const middle = lines.map((line) => `│  ${line.padEnd(width)}  │`).join('\n');
   return `${top}\n${middle}\n${bottom}`;
 }
 
 const app = express();
-const PORT = process.env.PORT || 5000; // Port to run the server
+const PORT = process.env.PORT || 3000; // Port to run the server
+
+
 
 /**
  * Proxy setup for '/upload' endpoint.
@@ -79,13 +93,54 @@ app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, 'build', 'index.html'));
 });
 
+// Error handling middleware
+app.use((err, req, res, next) => {
+  console.error(`[ERROR] ${err.message}`);
+  res.status(500).send('Server Error');
+});
+
+
+
+
+
+
+
+
+
+// // Middleware: Set Content Security Policy (CSP) for secure camera access
+// app.use((req, res, next) => {
+//   res.setHeader(
+//     'Content-Security-Policy',
+//     "default-src 'self'; media-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline';"
+//   );
+//   next();
+// });
+
+// // Middleware: Enable CORS for cross-origin requests (adjust origin if needed)
+// app.use(cors({ origin: '*' }));
+
+
+
+// // HTTPS options: Replace with your SSL certificates
+// const httpsOptions = {
+//   key: fs.readFileSync(path.join(__dirname, 'certs', 'key.pem')), // Path to SSL private key
+//   cert: fs.readFileSync(path.join(__dirname, 'certs', 'cert.pem')), // Path to SSL certificate
+// };
+
+// Create and start the HTTPS server
+// const server = https.createServer(httpsOptions, app);
+const server = http.createServer(app);
+
+
+
+
 /**
  * Starts the Express server.
  * Logs local and network URLs using kleur and for enhanced output.
  */
-app.listen(PORT, () => {
+server.listen(PORT, () => {
   const localUrl = `http://localhost:${PORT}`;
-  const networkUrl = `http://${require('ip').address()}:${PORT}`;
+  const networkUrl = `http://${ip.address()}:${PORT}`;
 
   console.log(
     'This is an obtimized production build (offical deployment)\n'
