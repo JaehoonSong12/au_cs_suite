@@ -465,6 +465,8 @@ scripts/
 ext/
 doc/
 dist/
+/[Dd]istribution/
+/[Dd]istributions/
 
 # OSX (MacOS) 
 .DS_Store
