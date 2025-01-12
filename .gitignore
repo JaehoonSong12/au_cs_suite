@@ -458,6 +458,9 @@ gpb_server/app/
 99-nodejs-setup.sh
 package-lock.json
 
+
+test/
+
 # automation scripts (.bat / .sh / .pl)
 scripts/
 
