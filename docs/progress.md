@@ -118,3 +118,19 @@ Backend and Frontend Integration.
     - Develop a fully designed UI/UX using tools like Figma or Adobe.
     - Launch **Alpha/Beta (2.0.0)** version with enhanced features.
     - Continue making minor/patch updates to version 1.0.0 until the major release.
+
+---
+
+## 01/10/2025
+
+- **Documentation Updates**:
+  - Modularized documentation into business and technical categories:
+    - Business:
+      - [Project Vision](./business/project_vision.md)
+      - [Project Bid](./business/project_bid.md)
+      - Three of contract documents
+    - Technical:
+      - [Functional Requirements](./technical/functional_requirements.md)
+      - [Non-Functional Requirements](./technical/non_functional_requirements.md)
+
+---
