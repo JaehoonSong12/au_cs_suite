@@ -25,9 +25,18 @@ Your paragraphs...
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 ------------------------------------------------------------------------>
 
-<!---------------------------------------------------------------------- @usage (iamage_hyperlink) 
+<!---------------------------------------------------------------------- @usage (image_hyperlink) 
 <div align="center">
     <img src="images/fluid.webp"/>
+</div>
+------------------------------------------------------------------------>
+
+<!---------------------------------------------------------------------- @usage (video_hyperlink) 
+<div align="center">
+    <video width="640" height="360" controls>
+        <source src="videos/UX_research.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
 </div>
 ------------------------------------------------------------------------>
 
