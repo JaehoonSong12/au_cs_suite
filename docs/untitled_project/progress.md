@@ -134,3 +134,34 @@ Backend and Frontend Integration.
       - [Non-Functional Requirements](./technical/non_functional_requirements.md)
 
 ---
+
+### **2025/01/12**
+- **First In-Person Meeting**:
+  - Held the first face-to-face meeting to discuss previous contracts, Git setup, and environment settings.
+
+#### **Key Discussion Points**
+
+1. **Contract Review**:
+   - Reviewed the previously drafted contracts (confidentiality and profit-sharing agreements).
+   - Identified a need for major revisions in the contracts.
+   - Decided that **Sowon** will consult with Yeongwon's other co-founders regarding our preferred working model.
+
+2. **Preferred Working Model**:
+   - Our team prefers an **outsourcing model**:
+     - We aim to develop an open-source software program.
+     - The program will be licensed and sold directly to clients like companies or stadiums requiring our services.
+   - Licensing Details:
+     - Yeongwon would be our **first client** if they agree to this model.
+     - Software licensing includes:
+       - Development of the program.
+       - Customization of frontend and features based on client requirements.
+       - Predefined periods for updates and maintenance as part of the license agreement.
+
+3. **Environment Setting**:
+   - Learned about configuring development environments using scripts.
+   - Topics covered:
+     - Setting up `.bashrc` and other shell scripts to automate environment setup.
+     - Creating virtual environments to quickly execute and test software directly on the machine.
+   - Improved understanding of efficient development workflows.
+
+---
