@@ -198,7 +198,7 @@ The following images provide visual documentation related to the picture booth r
 
 <div align="center">
     <video width="640" height="360" controls>
-        <source src="videos/20250112_1759062.mp4" type="video/mp4">
+        <source src="videos/UX_research.mp4" type="video/mp4">
         Your browser does not support the video tag.
     </video>
 </div>
