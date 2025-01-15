@@ -453,9 +453,7 @@ fastapi-react-client/
 data/
 poetry.lock
 dist.spec
-gpb_server/gui/
-gpb_server/app/
-gpb_server/test/
+gpb-backend/gpb_server/test/
 
 # automation scripts (.bat / .sh / .pl)
 scripts/
