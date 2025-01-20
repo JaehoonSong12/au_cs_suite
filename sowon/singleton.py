@@ -115,3 +115,27 @@ class TabularManager(metaclass=SingletonMeta):
         except Exception as e:
             raise ValueError(f"Error writing tabular file: {save_path}. Details: {e}")
 
+
+
+
+
+
+
+
+def testDate():    
+    date_manager = DateManager()
+    date_inputs = [
+        "01.21.2025",
+        "01.23.2025",
+        "01.24.2025",
+        "01.26.2025"
+    ]
+    for date_input in date_inputs:
+        print(f"Input: {date_input}")
+        print("Day of the week:", date_manager.get_day_of_week(date_input))
+
+
+
+# Example usage:
+if __name__ == "__main__":
+    testDate()
