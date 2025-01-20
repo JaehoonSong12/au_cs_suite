@@ -5,9 +5,8 @@ import json
 
 
 
-import sys, os
-
 # Add the directory containing main.py and other modules to sys.path
+import sys, os
 script_dir = os.path.dirname(os.path.realpath(__file__))
 if script_dir not in sys.path:
     sys.path.append(script_dir)
