@@ -92,6 +92,7 @@ def normalize_json_data(data):
 
 
 
+
 # Example of using the function with your JSON data
 normalized_json = normalize_json_data(json_data)
 print("Normalized JSON Data:")
