@@ -135,11 +135,11 @@ Backend and Frontend Integration.
 
 ---
 
-### **2025/01/12**
+## **2025/01/12**
 - **First In-Person Meeting**:
   - Held the first face-to-face meeting to discuss previous contracts, Git setup, and environment settings.
 
-#### **Key Discussion Points**
+### **Key Discussion Points**
 
 1. **Contract Review**:
    - Reviewed the previously drafted contracts (confidentiality and profit-sharing agreements).
@@ -202,3 +202,59 @@ The following images provide visual documentation related to the picture booth r
         Your browser does not support the video tag.
     </video>
 </div>
+
+---
+
+## 02/02/2025 (Lightening Meeting)
+
+### Networking
+
+**How would we build server?**
+
+1. Using **existing server** and **Network** for runnig GPB server.
+- ***Description***: 
+  - Everything from running a server to storing data runs on existing servers.
+- ***Advantages***:
+  - Server can run without a separate machine 
+- ***Problems***:
+  - Depending on the server provider's rules (dependent).
+  - load that does not fit the original purpose of use is delivered to the server because it causes a lot of traffic to the server.
+    - This is a burden on the server provider.
+  - Since different regulations exist for each server, different programming may be required for each server.
+
+2. Using **our machine** and borrow **only the internal network**.
+- ***Description***: 
+  - Our machine to connect the server to the server after driving the server and connecting the server.
+  Need an intranet to connect the internal professional, back-end database.
+- ***Advantages***: 
+  - Reduce the load on the server. Configuring a server environment that fits your needs and situations
+- ***Problems***: 
+  - Customers may be reluctant to use the network itself.
+  - Requires devices wherever you want the server.
+
+3. Running **servers and databases externally**, such as AWS
+- ***Description***: 
+  - Run the server from the external cloud. 
+  - Configured to be available as long as the user authenticates himself/herself on the internal network.
+- ***Advantages***: 
+  - No traffic applied to the internal network. Service is available anywhere if external access is allowed.
+  - No program modifications required for each user
+- ***Problems***:
+  - Expensive to use external servers. 
+  - Server operating expenses may not be paid for users and income
+
+### Storage
+
+**Database-Integrated BLOB Storage**
+
+- ***Description***:
+  - Store image data directly in the SQL database as BLOBs (Binary Large Objects), alongside metadata like picture IDs.
+- ***Advantages***:
+  1. Simplifies data management by keeping everything in one place.
+  2. Ensures transactional consistency between image data and metadata.
+  3. Easier to implement simple applications without separate storage logic.
+- ***Problems***:
+  1. lead to database bloat and performance issues with large image files.
+  2. Less efficient for handling large volumes of media compared to file systems.
+  3. Complex backups and restores due to the database size.
+
